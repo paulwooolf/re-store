@@ -12,7 +12,16 @@ const booksRequested = () => {
     }
 }
 
+const booksError = (error) => {
+    return {
+        books: [],
+        type: 'BOOKS_ERROR',
+        payload: error
+    }
+}
+
 export {
     booksLoaded,
-    booksRequested
+    booksRequested,
+    booksError
 }
